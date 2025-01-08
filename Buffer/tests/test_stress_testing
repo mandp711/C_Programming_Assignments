@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "Stress testing:"
+./xd.c large_input.txt > output1.txt &
+./xd.c large_input.txt > output2.txt &
+wait
+diff output1.txt output2.txt
